@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: trade-streaming-svc
+  cloud:
+    stream:
+      default-binder: local-kafka
+      bindings:
+        inbound:
+          binder: local-kafka
+          destination: inbound
+          contentType: application/json
+        outbound:
+          binder: local-kafka
+          destination: outbound
+          contentType: application/json
+      binders:
+        local-kafka:
+          type: kafka
+          environment:
+            spring:
+              cloud:
+                stream:
+                  kafka:
+                    binder:
+                      brokers: localhost:9092
+                      
+server:
+  port: 8081
+  servlet:
+    context-path: /stream-service
+
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka

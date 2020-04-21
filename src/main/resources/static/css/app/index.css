@@ -1,0 +1,26 @@
+body {
+	  background-color: rgb(0, 128, 192);	
+}
+
+.error {
+	border: 2px solid red;
+}
+.error-message {
+	color: red;
+}
+.success-message {
+	color: green;
+}
+
+ table{
+	color: white;
+}
+tbody tr td {
+	color: white;
+}
+th{
+	color: white;
+}
+button {
+	padding:0 8px !important;
+}

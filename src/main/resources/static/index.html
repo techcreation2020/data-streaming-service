@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>Track Application</title>
+<link rel="stylesheet" type="text/css" href="css/lib/bootstrap.css"></link>
+<link rel="stylesheet" type="text/css" href="css/app/index.css"></link>
+
+<script type="text/javascript" src="js/lib/jQuery/jQuery.js"></script>
+<!-- <script type="text/javascript" src="js/lib/jQuery/jquery-ui-min.js"></script> -->
+<script type="text/javascript" src="/stream-service/webjars/sockjs-client/sockjs.min.js"></script>
+<script type="text/javascript" src="/stream-service/webjars/stomp-websocket/stomp.min.js"></script>
+<script type="text/javascript" src="js/app/index.js"></script>
+</head>
+<body class="container-fluid">
+	<div class="jumbotron">
+		<h3>Track Application<h3/>
+	</div>
+	
+		<div class="row">
+			<div id="message"></div>
+			<div class="col-md-6">
+				<div class="row" id="transactionsHeader"><h4 style="color:white; margin-left:15px;">Transactions</h4></div>
+				<table class="table table-sm txnListTable">
+					<thead><tr><th>#</th><th>Name</th><th>Security</th><th>Units</th><th>Action</th></tr></thead>
+					<tbody id="transactionListBody"></tbody>
+				</table>
+			</div>			
+			<div class="col-md-6">
+				<div class="row" id="userDetailHeader"></div>
+				<table class="table table-hover table-sm userTxnListTable">
+					<thead><tr><th>#</th><th>Transaction Type</th><th>Units</th><th>Date/Time</th></tr></thead>
+					<tbody id="userTxnListBody"></tbody>
+				</table>
+			</div>
+		</div>
+	
+	<div class="container"></div>	
+</body>
+</html>
